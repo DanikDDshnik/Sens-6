@@ -34,10 +34,7 @@ namespace Sens_6
             CheckBox check5 = (CheckBox)sender;
             CheckBox check6 = (CheckBox)sender;
             CheckBox checkall = (CheckBox)sender;
-            if(checkAll.Checked == true)
-            {
-                MessageBox.Show("");
-            }
+
         }
     }
 }
