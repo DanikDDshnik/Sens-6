@@ -9,19 +9,18 @@
     <Grid x:Name="MainRoot">
         <Image Grid.RowSpan="10" Grid.Column="0" Grid.ColumnSpan="5"  Source="/photo_2024-02-12_01-30-09.jpg" Stretch="Fill" Margin="40,22,0,21"/>
         <StatusBar Grid.Column="4" Grid.ColumnSpan="2" Grid.Row="9" Background="#FFBFBFBF" FontFamily="Arial" FontWeight="Bold" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="0,23,0,0" >Умные ДНК Технологии</StatusBar>
-        <Button x:Name="resultButton" Grid.Column="7" Grid.ColumnSpan="2" Content="Result" Grid.Row="7" FontSize="16" FontWeight="Bold" Margin="0,43,0,43" Grid.RowSpan="3"/>
-        <Button x:Name="tasertButton" Grid.Column="7" Grid.ColumnSpan="2" Content="Tasert" Grid.Row="7" VerticalAlignment="Center" />
-        <Button x:Name="termostatButtin" Grid.Column="7" Grid.ColumnSpan="2" Content="Termostat" Grid.Row="6" VerticalAlignment="Center" />
-        <Button x:Name="referenceButton" Grid.Column="7" Grid.ColumnSpan="2" Content="Reference" Grid.Row="5" VerticalAlignment="Center" />
-        <Button x:Name="grafikButton" Grid.Column="7" Grid.ColumnSpan="2" Content="Вывести график" Grid.Row="4" VerticalAlignment="Center" />
-        <CheckBox x:Name="checkAll" Grid.Column="7" Grid.ColumnSpan="2" Content="Все пробирки" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="3" FontSize="16"/>
-        <CheckBox x:Name="check1"  Grid.Column="8" Content="1-ая &#xD;&#xA;пробирка" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-        <CheckBox x:Name="check2" Grid.Column="8" Content="2-ая &#xD;&#xA;пробирка" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="1"/>
-        <CheckBox x:Name="check3" Grid.Column="8" Content="3-ая &#xD;&#xA;пробирка" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="2"/>
-        <CheckBox x:Name="check4" Grid.Column="7" Content="4-ая &#xD;&#xA;пробирка" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-        <CheckBox x:Name="check5" Grid.Column="7" Content="5-ая &#xD;&#xA;пробирка" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="1"/>
-        <CheckBox x:Name="check6" Grid.Column="7" Content="6-ая &#xD;&#xA;пробирка" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="2"/>
-        <TextBlock Grid.Column="5" Grid.Row="4" Text="Hello"/>
+        <Button Name="resultButton" Grid.Column="7" Grid.ColumnSpan="2" Content="Result" Grid.Row="7" FontSize="16" FontWeight="Bold" Margin="0,43,0,43" Grid.RowSpan="3"/>
+        <Button Name="StartTasertButton" Grid.Column="7" Grid.ColumnSpan="2" Content="Tasert" Grid.Row="7" VerticalAlignment="Center" />
+        <Button Name="StartTermostatButton" Grid.Column="7" Grid.ColumnSpan="2" Content="Termostat" Grid.Row="6" VerticalAlignment="Center" />
+        <Button Name="StartReferenceButton" Grid.Column="7" Grid.ColumnSpan="2" Content="Reference" Grid.Row="5" VerticalAlignment="Center" />
+        <Button Name="OpenGraphWindowButton" Click="OpenGraphWindowButton_Click" Grid.Column="7" Grid.ColumnSpan="2" Content="Вывести график" Grid.Row="4" VerticalAlignment="Center" />
+        <CheckBox Name="TestTubeAll" Checked="TestTubeAll_Checked" Grid.Column="7" Grid.ColumnSpan="2"  IsThreeState="True" Content="Все пробирки" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="3" FontSize="16"/>
+        <CheckBox Name="TestTube1" Checked="TestTube_Checked" Grid.Column="8" Content="1-ая &#xD;&#xA;пробирка" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <CheckBox Name="TestTube2" Checked="TestTube_Checked" Grid.Column="8" Content="2-ая &#xD;&#xA;пробирка" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="1"/>
+        <CheckBox Name="TestTube3" Checked="TestTube_Checked" Grid.Column="8" Content="3-ая &#xD;&#xA;пробирка" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="2"/>
+        <CheckBox Name="TestTube4" Checked="TestTube_Checked" Grid.Column="7" Content="4-ая &#xD;&#xA;пробирка" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <CheckBox Name="TestTube5" Checked="TestTube_Checked" Grid.Column="7" Content="5-ая &#xD;&#xA;пробирка" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="1"/>
+        <CheckBox Name="TestTube6" Checked="TestTube_Checked" Grid.Column="7" Content="6-ая &#xD;&#xA;пробирка" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="2"/>
         <Grid.RowDefinitions>
             <RowDefinition/>
             <RowDefinition/>
