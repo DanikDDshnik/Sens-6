@@ -13,6 +13,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Collections.ObjectModel;
 
 namespace Sens_6
 {
@@ -32,13 +33,11 @@ namespace Sens_6
             TestTube4.IsChecked = newVal;
             TestTube5.IsChecked = newVal;
             TestTube6.IsChecked = newVal;
-
         }
 
         private void TestTube_Checked(object sender, RoutedEventArgs e)
         {
             TestTubeAll.IsChecked = null;
-
             if((TestTube1.IsChecked == true) &&
                 (TestTube2.IsChecked == true) &&
                 (TestTube3.IsChecked == true) &&
@@ -61,7 +60,6 @@ namespace Sens_6
         {
                 GraphWindow graphWindow = new GraphWindow();
                 graphWindow.Show();
-                OpenGraphWindowButton.Content = "График выведен";
         }
 
     }
