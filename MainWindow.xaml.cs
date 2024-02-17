@@ -15,6 +15,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Collections.ObjectModel;
 
+
 namespace Sens_6
 {
     public partial class MainWindow : Window
@@ -22,6 +23,7 @@ namespace Sens_6
         public MainWindow()
         {
             InitializeComponent();
+
         }
 
         private void TestTubeAll_Checked(object sender, RoutedEventArgs e)
@@ -38,7 +40,7 @@ namespace Sens_6
         private void TestTube_Checked(object sender, RoutedEventArgs e)
         {
             TestTubeAll.IsChecked = null;
-            if((TestTube1.IsChecked == true) &&
+            if ((TestTube1.IsChecked == true) &&
                 (TestTube2.IsChecked == true) &&
                 (TestTube3.IsChecked == true) &&
                 (TestTube4.IsChecked == true) &&
@@ -58,9 +60,14 @@ namespace Sens_6
 
         void OpenGraphWindowButton_Click(object sender, RoutedEventArgs e)
         {
-                GraphWindow graphWindow = new GraphWindow();
-                graphWindow.Show();
+            GraphWindow graphWindow = new GraphWindow();
+            graphWindow.Show();
         }
+        void StartReferenceButton_Click(object sender, RoutedEventArgs e)
+        {
+            
+        }
+
 
     }
 }

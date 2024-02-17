@@ -14,6 +14,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Collections.ObjectModel;
 
+
 namespace Sens_6
 {
     public partial class GraphWindow : Window

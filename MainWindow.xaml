@@ -12,7 +12,7 @@
         <Button Name="resultButton" Grid.Column="7" Grid.ColumnSpan="2" Content="Result" Grid.Row="7" FontSize="16" FontWeight="Bold" Margin="0,43,0,43" Grid.RowSpan="3"/>
         <Button Name="StartTasertButton" Grid.Column="7" Grid.ColumnSpan="2" Content="Tasert" Grid.Row="7" VerticalAlignment="Center" />
         <Button Name="StartTermostatButton" Grid.Column="7" Grid.ColumnSpan="2" Content="Termostat" Grid.Row="6" VerticalAlignment="Center" />
-        <Button Name="StartReferenceButton" Grid.Column="7" Grid.ColumnSpan="2" Content="Reference" Grid.Row="5" VerticalAlignment="Center" />
+        <Button Name="StartReferenceButton" Click ="StartReferenceButton_Click" Grid.Column="7" Grid.ColumnSpan="2" Content="Reference" Grid.Row="5" VerticalAlignment="Center" />
         <Button Name="OpenGraphWindowButton" Click="OpenGraphWindowButton_Click" Grid.Column="7" Grid.ColumnSpan="2" Content="Вывести график" Grid.Row="4" VerticalAlignment="Center" />
         <CheckBox Name="TestTubeAll" Checked="TestTubeAll_Checked" Grid.Column="7" Grid.ColumnSpan="2"  IsThreeState="True" Content="Все пробирки" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="3" FontSize="16"/>
         <CheckBox Name="TestTube1" Checked="TestTube_Checked" Grid.Column="8" Content="1-ая &#xD;&#xA;канал" HorizontalAlignment="Center" VerticalAlignment="Center"/>
