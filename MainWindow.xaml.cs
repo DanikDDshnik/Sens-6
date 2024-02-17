@@ -16,6 +16,7 @@ using System.Windows.Shapes;
 using System.Collections.ObjectModel;
 
 
+
 namespace Sens_6
 {
     public partial class MainWindow : Window
@@ -62,12 +63,28 @@ namespace Sens_6
         {
             GraphWindow graphWindow = new GraphWindow();
             graphWindow.Show();
-        }
-        void StartReferenceButton_Click(object sender, RoutedEventArgs e)
-        {
-            
+
         }
 
+        void StartReferenceButton_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("Reference Button is clicked");
+        }
+
+        void StartTermostatButton_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("Termostat Button is clicked");
+        }
+
+        void StartTasertButton_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("Tasert Button is clicked");
+        }
+
+        void resultButton_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("Result Button is clicked");
+        }
 
     }
 }
