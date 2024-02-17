@@ -5,8 +5,7 @@
         Title= "Grap" Height="450" Width="800">
     <Grid>
         <d3:ChartPlotter Name="plotter">
-            <d3:LineGraph Name="Line" Stroke="Blue"/>
-            <d3:LineGraph Name="Line2" Stroke="Red"/>
+            <d3:LineGraph Name="lineGraph" Stroke="Blue"/>
         </d3:ChartPlotter>
     </Grid>
 </Window>
