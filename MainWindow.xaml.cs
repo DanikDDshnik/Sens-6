@@ -14,13 +14,15 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Collections.ObjectModel;
-
-
+using Microsoft.Research.DynamicDataDisplay.DataSources;
+using Microsoft.Research.DynamicDataDisplay;
 
 namespace Sens_6
 {
+
     public partial class MainWindow : Window
     {
+
         public MainWindow()
         {
             InitializeComponent();
@@ -36,6 +38,13 @@ namespace Sens_6
             TestTube4.IsChecked = newVal;
             TestTube5.IsChecked = newVal;
             TestTube6.IsChecked = newVal;
+            Settings.TestTubeAll = TestTubeAll.IsChecked ?? false;
+            Settings.TestTube1 = TestTube1.IsChecked ?? false;
+            Settings.TestTube2 = TestTube2.IsChecked ?? false;
+            Settings.TestTube3 = TestTube3.IsChecked ?? false;
+            Settings.TestTube4 = TestTube4.IsChecked ?? false;
+            Settings.TestTube5 = TestTube5.IsChecked ?? false;
+            Settings.TestTube6 = TestTube6.IsChecked ?? false;
         }
 
         private void TestTube_Checked(object sender, RoutedEventArgs e)
@@ -58,12 +67,10 @@ namespace Sens_6
                 TestTubeAll.IsChecked = false;
         }
 
-
         void OpenGraphWindowButton_Click(object sender, RoutedEventArgs e)
         {
             GraphWindow graphWindow = new GraphWindow();
             graphWindow.Show();
-
         }
 
         void StartReferenceButton_Click(object sender, RoutedEventArgs e)
@@ -87,4 +94,5 @@ namespace Sens_6
         }
 
     }
+
 }

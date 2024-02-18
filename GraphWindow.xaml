@@ -5,7 +5,12 @@
         Title= "Grap" Height="450" Width="800">
     <Grid>
         <d3:ChartPlotter Name="plotter">
-            <d3:LineGraph Name="lineGraph" Stroke="Blue"/>
+            <d3:LineGraph Name="lineGraphReference_1" Stroke="Blue"/>
+            <d3:LineGraph Name="lineGraphReference_2" Stroke="Red"/>
+            <d3:LineGraph Name="lineGraphReference_3" Stroke="Orange"/>
+            <d3:LineGraph Name="lineGraphReference_4" Stroke="Green"/>
+            <d3:LineGraph Name="lineGraphReference_5" Stroke="Yellow"/>
+            <d3:LineGraph Name="lineGraphReference_6" Stroke="Black"/>
         </d3:ChartPlotter>
     </Grid>
 </Window>
