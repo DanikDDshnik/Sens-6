@@ -53,11 +53,76 @@ namespace Sens_6
                 chanell_Reference[0].name = "1 канал";
                 for (int j = 0; j < 256; j++)
                 {
-                    int temp = rand.Next(0, 100);
+                    int temp = rand.Next(0, 10);
                     chanell_Reference[0].aData = temp;
                     double x = j;
                     double y = chanell_Reference[0].aData;
                     points1.Add(new Point(x, y));
+                }
+            }
+
+            if (TestTube2 == true)
+            {
+                chanell_Reference[1].name = "2 канал";
+                for (int j = 0; j < 256; j++)
+                {
+                    int temp = rand.Next(0, 10);
+                    chanell_Reference[1].aData = temp;
+                    double x = j;
+                    double y = chanell_Reference[1].aData;
+                    points2.Add(new Point(x, y));
+                }
+            }
+
+            if (TestTube3 == true)
+            {
+                chanell_Reference[2].name = "3 канал";
+                for (int j = 0; j < 256; j++)
+                {
+                    int temp = rand.Next(0, 10);
+                    chanell_Reference[2].aData = temp;
+                    double x = j;
+                    double y = chanell_Reference[2].aData;
+                    points3.Add(new Point(x, y));
+                }
+            }
+
+            if (TestTube4 == true)
+            {
+                chanell_Reference[3].name = "4 канал";
+                for (int j = 0; j < 256; j++)
+                {
+                    int temp = rand.Next(0, 10);
+                    chanell_Reference[3].aData = temp;
+                    double x = j;
+                    double y = chanell_Reference[3].aData;
+                    points4.Add(new Point(x, y));
+                }
+            }
+
+            if (TestTube5 == true)
+            {
+                chanell_Reference[4].name = "5 канал";
+                for (int j = 0; j < 256; j++)
+                {
+                    int temp = rand.Next(0, 10);
+                    chanell_Reference[4].aData = temp;
+                    double x = j;
+                    double y = chanell_Reference[4].aData;
+                    points5.Add(new Point(x, y));
+                }
+            }
+
+            if (TestTube6 == true)
+            {
+                chanell_Reference[5].name = "6 канал";
+                for (int j = 0; j < 256; j++)
+                {
+                    int temp = rand.Next(0, 10);
+                    chanell_Reference[5].aData = temp;
+                    double x = j;
+                    double y = chanell_Reference[5].aData;
+                    points6.Add(new Point(x, y));
                 }
             }
 

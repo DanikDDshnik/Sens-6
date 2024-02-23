@@ -114,6 +114,7 @@ namespace Sens_6
                 lineGraphReference_4.DataSource = dataSource;
             }
 
+
             if (TestTube5 == true)
             {
                 var dataSource = new ObservableDataSource<Point>();
