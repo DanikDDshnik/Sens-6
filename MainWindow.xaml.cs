@@ -17,6 +17,7 @@ using System.Collections.ObjectModel;
 using Microsoft.Research.DynamicDataDisplay.DataSources;
 using Microsoft.Research.DynamicDataDisplay;
 
+
 namespace Sens_6
 {
 
@@ -38,6 +39,7 @@ namespace Sens_6
             TestTube4.IsChecked = newVal;
             TestTube5.IsChecked = newVal;
             TestTube6.IsChecked = newVal;
+
             Settings.TestTubeAll = TestTubeAll.IsChecked ?? false;
             Settings.TestTube1 = TestTube1.IsChecked ?? false;
             Settings.TestTube2 = TestTube2.IsChecked ?? false;
@@ -50,6 +52,7 @@ namespace Sens_6
         private void TestTube_Checked(object sender, RoutedEventArgs e)
         {
             TestTubeAll.IsChecked = null;
+
             if ((TestTube1.IsChecked == true) &&
                 (TestTube2.IsChecked == true) &&
                 (TestTube3.IsChecked == true) &&
@@ -65,6 +68,14 @@ namespace Sens_6
                 (TestTube5.IsChecked == false) &&
                 (TestTube6.IsChecked == false))
                 TestTubeAll.IsChecked = false;
+
+            Settings.TestTubeAll = TestTubeAll.IsChecked ?? false;
+            Settings.TestTube1 = TestTube1.IsChecked ?? false;
+            Settings.TestTube2 = TestTube2.IsChecked ?? false;
+            Settings.TestTube3 = TestTube3.IsChecked ?? false;
+            Settings.TestTube4 = TestTube4.IsChecked ?? false;
+            Settings.TestTube5 = TestTube5.IsChecked ?? false;
+            Settings.TestTube6 = TestTube6.IsChecked ?? false;
         }
 
         void OpenGraphWindowButton_Click(object sender, RoutedEventArgs e)
@@ -75,6 +86,8 @@ namespace Sens_6
 
         void StartReferenceButton_Click(object sender, RoutedEventArgs e)
         {
+            StartReference startReference = new StartReference();
+            startReference.Reference();
             MessageBox.Show("Reference Button is clicked");
         }
 
@@ -93,6 +106,10 @@ namespace Sens_6
             MessageBox.Show("Result Button is clicked");
         }
 
+        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
     }
 
 }

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 using Sens_6;
 
 namespace Sens_6
@@ -16,6 +17,14 @@ namespace Sens_6
         public static bool TestTube5 { get; set; }
         public static bool TestTube6 { get; set; }
         public static bool TestTubeAll { get; set; }
+
+        public static List<Point> points1 { get; set; }
+        public static List<Point> points2 { get; set; }
+        public static List<Point> points3 { get; set; }
+        public static List<Point> points4 { get; set; }
+        public static List<Point> points5 { get; set; }
+        public static List<Point> points6 { get; set; }
+
 
     }
 }

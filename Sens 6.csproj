@@ -63,6 +63,7 @@
     </ApplicationDefinition>
     <Compile Include="Setting.cs" />
     <Compile Include="StartReference.cs" />
+    <Compile Include="struct.cs" />
     <Page Include="GraphWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
