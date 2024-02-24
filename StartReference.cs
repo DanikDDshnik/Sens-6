@@ -13,12 +13,17 @@ namespace Sens_6
     {
         struct DataChanell
         {
-            public const int SIZE_VECTOR = 256;
+            public int Size()
+            {
+                const int SIZE_VECTOR = 256;
+                return SIZE_VECTOR;
+            }
+
 
             public string name; //  Номер и название канала
 
-            public int aData; // Данные полученые с прибора
-            public double aTotalCapacity; // Общая ёмкость
+            public int[] aData; // Данные полученые с прибора
+            public double[] aTotalCapacity; // Общая ёмкость
             public double[] aData_Capacity; // Объём данных
             public int[] aData_Frequency; // Частота данных
             public int[] aError_Capacity; // Ошибки ёмкости
@@ -28,10 +33,23 @@ namespace Sens_6
 
         }
 
+
         public void Reference()
         {
             Random rand = new Random();
             DataChanell[] chanell_Reference = new DataChanell[6];
+
+            for(int i = 0; i < 6; i++)
+            {
+                chanell_Reference[i].name = "Канал " + i;
+
+                chanell_Reference[i].aData = new int[256];
+                chanell_Reference[i].aTotalCapacity = new double[256];
+                chanell_Reference[i].aData_Capacity = new double[256];
+                chanell_Reference[i].aData_Frequency = new int[256];
+                chanell_Reference[i].aError_Capacity = new int[256];
+                chanell_Reference[i].aError_Frequency = new int[256];
+            }
 
             bool TestTube1 = Settings.TestTube1;
             bool TestTube2 = Settings.TestTube1;
@@ -54,9 +72,9 @@ namespace Sens_6
                 for (int j = 0; j < 256; j++)
                 {
                     int temp = rand.Next(0, 10);
-                    chanell_Reference[0].aData = temp;
+                    chanell_Reference[0].aData[j] = temp;
                     double x = j;
-                    double y = chanell_Reference[0].aData;
+                    double y = chanell_Reference[0].aData[j];
                     points1.Add(new Point(x, y));
                 }
             }
@@ -67,9 +85,9 @@ namespace Sens_6
                 for (int j = 0; j < 256; j++)
                 {
                     int temp = rand.Next(0, 10);
-                    chanell_Reference[1].aData = temp;
+                    chanell_Reference[1].aData[j] = temp;
                     double x = j;
-                    double y = chanell_Reference[1].aData;
+                    double y = chanell_Reference[1].aData[j];
                     points2.Add(new Point(x, y));
                 }
             }
@@ -80,9 +98,9 @@ namespace Sens_6
                 for (int j = 0; j < 256; j++)
                 {
                     int temp = rand.Next(0, 10);
-                    chanell_Reference[2].aData = temp;
+                    chanell_Reference[2].aData[j] = temp;
                     double x = j;
-                    double y = chanell_Reference[2].aData;
+                    double y = chanell_Reference[2].aData[j];
                     points3.Add(new Point(x, y));
                 }
             }
@@ -93,9 +111,9 @@ namespace Sens_6
                 for (int j = 0; j < 256; j++)
                 {
                     int temp = rand.Next(0, 10);
-                    chanell_Reference[3].aData = temp;
+                    chanell_Reference[3].aData[j] = temp;
                     double x = j;
-                    double y = chanell_Reference[3].aData;
+                    double y = chanell_Reference[3].aData[j];
                     points4.Add(new Point(x, y));
                 }
             }
@@ -106,9 +124,9 @@ namespace Sens_6
                 for (int j = 0; j < 256; j++)
                 {
                     int temp = rand.Next(0, 10);
-                    chanell_Reference[4].aData = temp;
+                    chanell_Reference[4].aData[j] = temp;
                     double x = j;
-                    double y = chanell_Reference[4].aData;
+                    double y = chanell_Reference[4].aData[j];
                     points5.Add(new Point(x, y));
                 }
             }
@@ -119,9 +137,9 @@ namespace Sens_6
                 for (int j = 0; j < 256; j++)
                 {
                     int temp = rand.Next(0, 10);
-                    chanell_Reference[5].aData = temp;
+                    chanell_Reference[5].aData[j] = temp;
                     double x = j;
-                    double y = chanell_Reference[5].aData;
+                    double y = chanell_Reference[5].aData[j];
                     points6.Add(new Point(x, y));
                 }
             }

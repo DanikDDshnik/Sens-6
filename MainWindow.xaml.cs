@@ -30,6 +30,8 @@ namespace Sens_6
 
         }
 
+        //private void GetDataName1
+
         private void TestTubeAll_Checked(object sender, RoutedEventArgs e)
         {
             bool newVal = (TestTubeAll.IsChecked == true);
