@@ -80,6 +80,40 @@ namespace Sens_6
             Settings.TestTube6 = TestTube6.IsChecked ?? false;
         }
 
+        string[] chanellName = new string[6];
+
+        void TextBox6_TextChanged(object sender, RoutedEventArgs e)
+        {
+            chanellName[5] = GetDataName6.Text;
+            Settings.chanellName[5] = chanellName[5];
+        }
+        void TextBox5_TextChanged(object sender, RoutedEventArgs e)
+        {
+            chanellName[4] = GetDataName5.Text;
+            Settings.chanellName[4] = chanellName[4];
+        }
+        void TextBox4_TextChanged(object sender, RoutedEventArgs e)
+        {
+            chanellName[3] = GetDataName4.Text;
+            Settings.chanellName[3] = chanellName[3];
+        }
+        void TextBox3_TextChanged(object sender, RoutedEventArgs e)
+        {
+            chanellName[2] = GetDataName3.Text;
+            Settings.chanellName[2] = chanellName[2];
+        }
+        void TextBox2_TextChanged(object sender, RoutedEventArgs e)
+        {
+            chanellName[1] = GetDataName2.Text;
+            Settings.chanellName[1] = chanellName[1];
+        }
+        void TextBox1_TextChanged(object sender, RoutedEventArgs e)
+        {
+            chanellName[0] = GetDataName1.Text;
+            Settings.chanellName[0] = chanellName[0];
+        }
+
+
         void OpenGraphWindowButton_Click(object sender, RoutedEventArgs e)
         {
             GraphWindow graphWindow = new GraphWindow();
@@ -106,11 +140,6 @@ namespace Sens_6
         void resultButton_Click(object sender, RoutedEventArgs e)
         {
             MessageBox.Show("Result Button is clicked");
-        }
-
-        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
-        {
-
         }
     }
 

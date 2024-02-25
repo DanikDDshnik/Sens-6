@@ -68,7 +68,7 @@ namespace Sens_6
 
             if (TestTube1 == true)
             {
-                chanell_Reference[0].name = "1 канал";
+                chanell_Reference[0].name = Settings.chanellName[0];
                 for (int j = 0; j < 256; j++)
                 {
                     int temp = rand.Next(0, 10);
@@ -77,11 +77,12 @@ namespace Sens_6
                     double y = chanell_Reference[0].aData[j];
                     points1.Add(new Point(x, y));
                 }
+                MessageBox.Show(chanell_Reference[0].name);
             }
 
             if (TestTube2 == true)
             {
-                chanell_Reference[1].name = "2 канал";
+                chanell_Reference[1].name = Settings.chanellName[1];
                 for (int j = 0; j < 256; j++)
                 {
                     int temp = rand.Next(0, 10);
@@ -94,7 +95,7 @@ namespace Sens_6
 
             if (TestTube3 == true)
             {
-                chanell_Reference[2].name = "3 канал";
+                chanell_Reference[2].name = Settings.chanellName[2];
                 for (int j = 0; j < 256; j++)
                 {
                     int temp = rand.Next(0, 10);
@@ -107,7 +108,7 @@ namespace Sens_6
 
             if (TestTube4 == true)
             {
-                chanell_Reference[3].name = "4 канал";
+                chanell_Reference[3].name = Settings.chanellName[3];
                 for (int j = 0; j < 256; j++)
                 {
                     int temp = rand.Next(0, 10);
@@ -120,7 +121,7 @@ namespace Sens_6
 
             if (TestTube5 == true)
             {
-                chanell_Reference[4].name = "5 канал";
+                chanell_Reference[4].name = Settings.chanellName[4];
                 for (int j = 0; j < 256; j++)
                 {
                     int temp = rand.Next(0, 10);
@@ -133,7 +134,7 @@ namespace Sens_6
 
             if (TestTube6 == true)
             {
-                chanell_Reference[5].name = "6 канал";
+                chanell_Reference[5].name = Settings.chanellName[5];
                 for (int j = 0; j < 256; j++)
                 {
                     int temp = rand.Next(0, 10);

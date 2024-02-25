@@ -25,6 +25,9 @@ namespace Sens_6
         public static List<Point> points5 { get; set; }
         public static List<Point> points6 { get; set; }
 
+        public static string[] chanellName { get; set; } = new string[6];
+
+
 
     }
 }
