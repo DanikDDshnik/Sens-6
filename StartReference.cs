@@ -6,6 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
+using System.IO;
 
 namespace Sens_6
 {
@@ -77,7 +78,6 @@ namespace Sens_6
                     double y = chanell_Reference[0].aData[j];
                     points1.Add(new Point(x, y));
                 }
-                MessageBox.Show(chanell_Reference[0].name);
             }
 
             if (TestTube2 == true)
