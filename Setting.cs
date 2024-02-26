@@ -18,6 +18,7 @@ namespace Sens_6
         public static bool TestTube6 { get; set; }
         public static bool TestTubeAll { get; set; }
 
+
         public static List<Point> points1 { get; set; }
         public static List<Point> points2 { get; set; }
         public static List<Point> points3 { get; set; }
@@ -25,8 +26,16 @@ namespace Sens_6
         public static List<Point> points5 { get; set; }
         public static List<Point> points6 { get; set; }
 
+
         public static string[] chanellName { get; set; } = new string[6];
 
+
+        public static bool StandartNameChanell_1 { get; set; }
+        public static bool StandartNameChanell_2 { get; set; }
+        public static bool StandartNameChanell_3 { get; set; }
+        public static bool StandartNameChanell_4 { get; set; }
+        public static bool StandartNameChanell_5 { get; set; }
+        public static bool StandartNameChanell_6 { get; set; }
 
 
     }

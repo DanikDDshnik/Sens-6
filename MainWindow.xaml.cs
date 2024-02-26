@@ -27,8 +27,16 @@ namespace Sens_6
         public MainWindow()
         {
             InitializeComponent();
-
         }
+
+        string[] chanellName = new string[6];
+        bool StandartNameChanell_1 = true;
+        bool StandartNameChanell_2 = true;
+        bool StandartNameChanell_3 = true;
+        bool StandartNameChanell_4 = true;
+        bool StandartNameChanell_5 = true;
+        bool StandartNameChanell_6 = true;
+
 
         private void TestTube_Checked(object sender, RoutedEventArgs e)
         {
@@ -77,37 +85,47 @@ namespace Sens_6
         }
 
 
-        string[] chanellName = new string[6];
-
         void TextBox6_TextChanged(object sender, RoutedEventArgs e)
         {
             chanellName[5] = GetDataName6.Text;
             Settings.chanellName[5] = chanellName[5];
+            StandartNameChanell_6 = false;
+            Settings.StandartNameChanell_6 = StandartNameChanell_6;
         }
         void TextBox5_TextChanged(object sender, RoutedEventArgs e)
         {
             chanellName[4] = GetDataName5.Text;
             Settings.chanellName[4] = chanellName[4];
+            StandartNameChanell_5 = false;
+            Settings.StandartNameChanell_5 = StandartNameChanell_5;
         }
         void TextBox4_TextChanged(object sender, RoutedEventArgs e)
         {
             chanellName[3] = GetDataName4.Text;
             Settings.chanellName[3] = chanellName[3];
+            StandartNameChanell_4 = false;
+            Settings.StandartNameChanell_4 = StandartNameChanell_4;
         }
         void TextBox3_TextChanged(object sender, RoutedEventArgs e)
         {
             chanellName[2] = GetDataName3.Text;
             Settings.chanellName[2] = chanellName[2];
+            StandartNameChanell_3 = false;
+            Settings.StandartNameChanell_3 = StandartNameChanell_3;
         }
         void TextBox2_TextChanged(object sender, RoutedEventArgs e)
         {
             chanellName[1] = GetDataName2.Text;
             Settings.chanellName[1] = chanellName[1];
+            StandartNameChanell_2 = false;
+            Settings.StandartNameChanell_2 = StandartNameChanell_2;
         }
         void TextBox1_TextChanged(object sender, RoutedEventArgs e)
         {
             chanellName[0] = GetDataName1.Text;
             Settings.chanellName[0] = chanellName[0];
+            StandartNameChanell_1 = false;
+            Settings.StandartNameChanell_1 = StandartNameChanell_1;
         }
 
 

@@ -42,8 +42,6 @@ namespace Sens_6
 
             for(int i = 0; i < 6; i++)
             {
-                chanell_Reference[i].name = "Канал " + i;
-
                 chanell_Reference[i].aData = new int[256];
                 chanell_Reference[i].aTotalCapacity = new double[256];
                 chanell_Reference[i].aData_Capacity = new double[256];
@@ -72,6 +70,14 @@ namespace Sens_6
                 chanell_Reference[0].name = Settings.chanellName[0];
                 for (int j = 0; j < 256; j++)
                 {
+                    if(Settings.StandartNameChanell_1 == true)
+                    {
+                        chanell_Reference[0].name = "Канал номер 1";
+                    }
+                    else
+                    {
+                        chanell_Reference[0].name = Settings.chanellName[0];
+                    }
                     int temp = rand.Next(0, 10);
                     chanell_Reference[0].aData[j] = temp;
                     double x = j;
@@ -82,6 +88,14 @@ namespace Sens_6
 
             if (TestTube2 == true)
             {
+                if (Settings.StandartNameChanell_2 == true)
+                {
+                    chanell_Reference[1].name = "Канал номер 2";
+                }
+                else
+                {
+                    chanell_Reference[1].name = Settings.chanellName[1];
+                }
                 chanell_Reference[1].name = Settings.chanellName[1];
                 for (int j = 0; j < 256; j++)
                 {
@@ -95,6 +109,14 @@ namespace Sens_6
 
             if (TestTube3 == true)
             {
+                if (Settings.StandartNameChanell_3 == true)
+                {
+                    chanell_Reference[2].name = "Канал номер 3";
+                }
+                else
+                {
+                    chanell_Reference[2].name = Settings.chanellName[2];
+                }
                 chanell_Reference[2].name = Settings.chanellName[2];
                 for (int j = 0; j < 256; j++)
                 {
@@ -108,6 +130,14 @@ namespace Sens_6
 
             if (TestTube4 == true)
             {
+                if (Settings.StandartNameChanell_4 == true)
+                {
+                    chanell_Reference[3].name = "Канал номер 4";
+                }
+                else
+                {
+                    chanell_Reference[3].name = Settings.chanellName[3];
+                }
                 chanell_Reference[3].name = Settings.chanellName[3];
                 for (int j = 0; j < 256; j++)
                 {
@@ -121,6 +151,14 @@ namespace Sens_6
 
             if (TestTube5 == true)
             {
+                if (Settings.StandartNameChanell_5 == true)
+                {
+                    chanell_Reference[4].name = "Канал номер 5";
+                }
+                else
+                {
+                    chanell_Reference[4].name = Settings.chanellName[4];
+                }
                 chanell_Reference[4].name = Settings.chanellName[4];
                 for (int j = 0; j < 256; j++)
                 {
@@ -137,6 +175,14 @@ namespace Sens_6
                 chanell_Reference[5].name = Settings.chanellName[5];
                 for (int j = 0; j < 256; j++)
                 {
+                    if (Settings.StandartNameChanell_6 == true)
+                    {
+                        chanell_Reference[5].name = "Канал номер 6";
+                    }
+                    else
+                    {
+                        chanell_Reference[5].name = Settings.chanellName[5];
+                    }
                     int temp = rand.Next(0, 10);
                     chanell_Reference[5].aData[j] = temp;
                     double x = j;
