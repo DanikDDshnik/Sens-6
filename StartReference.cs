@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 using System.Windows;
 using System.IO;
 
+
 namespace Sens_6
 {
     public partial class StartReference
@@ -78,11 +79,18 @@ namespace Sens_6
                     {
                         chanell_Reference[0].name = Settings.chanellName[0];
                     }
-                    int temp = rand.Next(0, 10);
-                    chanell_Reference[0].aData[j] = temp;
-                    double x = j;
-                    double y = chanell_Reference[0].aData[j];
-                    points1.Add(new Point(x, y));
+
+                    string path = "sens2_ref.txt";
+                    using (StreamReader sr = new StreamReader(path))
+                    {
+                        string list = "0";
+                        for (int i = 0; i < 256; i++)
+                        {
+                            list = sr.ReadLine();
+                            chanell_Reference[0].aData[i] = Convert.ToInt32(list);
+                            points1.Add(new Point(i, chanell_Reference[0].aData[i]));
+                        }
+                    }
                 }
             }
 
