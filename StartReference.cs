@@ -17,6 +17,7 @@ namespace Sens_6
 
         public void Reference()
         {
+            Random rand = new Random();
             DataChanell[] chanell_Reference = new DataChanell[6];
 
             for(int i = 0; i < 6; i++)
@@ -86,26 +87,26 @@ namespace Sens_6
 
             if (TestTube3 == true)
             {
-                //for (int j = 0; j < 256; j++)
-                //{
-                //    int temp = rand.Next(0, 10);
-                //    chanell_Reference[2].aData[j] = temp;
-                //    double x = j;
-                //    double y = chanell_Reference[2].aData[j];
-                //    points3.Add(new Point(x, y));
-                //}
+                for (int j = 0; j < 256; j++)
+                {
+                    int temp = rand.Next(0, 10);
+                    chanell_Reference[2].aData[j] = temp;
+                    double x = j;
+                    double y = chanell_Reference[2].aData[j];
+                    points3_ref.Add(new Point(x, y));
+                }
             }
 
             if (TestTube4 == true)
             {
-                //for (int j = 0; j < 256; j++)
-                //{
-                //    int temp = rand.Next(0, 10);
-                //    chanell_Reference[3].aData[j] = temp;
-                //    double x = j;
-                //    double y = chanell_Reference[3].aData[j];
-                //    points4.Add(new Point(x, y));
-                //}
+                for (int j = 0; j < 256; j++)
+                {
+                    int temp = rand.Next(0, 10);
+                    chanell_Reference[3].aData[j] = temp;
+                    double x = j;
+                    double y = chanell_Reference[3].aData[j];
+                    points4_ref.Add(new Point(x, y));
+                }
             }
 
             if (TestTube5 == true)

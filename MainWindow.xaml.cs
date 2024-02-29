@@ -49,6 +49,13 @@ namespace Sens_6
                 (TestTube5.IsChecked == false) &&
                 (TestTube6.IsChecked == false))
                 TestTubeAll.IsChecked = false;
+
+            Settings.TestTube1 = TestTube1.IsChecked ?? true;
+            Settings.TestTube2 = TestTube2.IsChecked ?? true;
+            Settings.TestTube3 = TestTube3.IsChecked ?? true;
+            Settings.TestTube4 = TestTube4.IsChecked ?? true;
+            Settings.TestTube5 = TestTube5.IsChecked ?? true;
+            Settings.TestTube6 = TestTube6.IsChecked ?? true;
         }
 
         private void TestTubeAll_Checked(object sender, RoutedEventArgs e)
@@ -61,6 +68,13 @@ namespace Sens_6
             TestTube4.IsChecked = newVal;
             TestTube5.IsChecked = newVal;
             TestTube6.IsChecked = newVal;
+
+            Settings.TestTube1 = TestTube1.IsChecked ?? true;
+            Settings.TestTube2 = TestTube2.IsChecked ?? true;
+            Settings.TestTube3 = TestTube3.IsChecked ?? true;
+            Settings.TestTube4 = TestTube4.IsChecked ?? true;
+            Settings.TestTube5 = TestTube5.IsChecked ?? true;
+            Settings.TestTube6 = TestTube6.IsChecked ?? true;
         }
 
 
@@ -104,14 +118,6 @@ namespace Sens_6
 
         void StartReferenceButton_Click(object sender, RoutedEventArgs e)
         {
-
-            Settings.TestTube1 = TestTube1.IsChecked ?? true;
-            Settings.TestTube2 = TestTube2.IsChecked ?? true;
-            Settings.TestTube3 = TestTube3.IsChecked ?? true;
-            Settings.TestTube4 = TestTube4.IsChecked ?? true;
-            Settings.TestTube5 = TestTube5.IsChecked ?? true;
-            Settings.TestTube6 = TestTube6.IsChecked ?? true;
-
             StartReference startReference = new StartReference();
             startReference.Reference();
             MessageBox.Show("Reference Button is clicked");
