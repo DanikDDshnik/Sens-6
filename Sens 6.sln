@@ -6,9 +6,6 @@ MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sens 6", "Sens 6.csproj", "{A6380A59-CAD6-4852-9AB0-674D0FE9BDC3}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Элементы решения", "Элементы решения", "{47B86761-EED3-4E80-BDEC-22CA577F0247}"
-	ProjectSection(SolutionItems) = preProject
-		struct.cs = struct.cs
-	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

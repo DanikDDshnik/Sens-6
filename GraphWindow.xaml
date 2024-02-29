@@ -10,11 +10,11 @@
         </Grid.ColumnDefinitions>
         <d3:ChartPlotter Name="plotter" Grid.ColumnSpan="2">
             <d3:LineGraph Name="lineGraphReference_1" Stroke="Blue"/>
-            <d3:LineGraph Name="lineGraphReference_2" Stroke="Red"/>
-            <d3:LineGraph Name="lineGraphReference_3" Stroke="Orange"/>
-            <d3:LineGraph Name="lineGraphReference_4" Stroke="Green"/>
-            <d3:LineGraph Name="lineGraphReference_5" Stroke="Yellow"/>
-            <d3:LineGraph Name="lineGraphReference_6" Stroke="Black"/>
+            <d3:LineGraph Name="lineGraphReference_2" Stroke="Blue"/>
+            <d3:LineGraph Name="lineGraphReference_3" Stroke="Blue"/>
+            <d3:LineGraph Name="lineGraphReference_4" Stroke="Blue"/>
+            <d3:LineGraph Name="lineGraphReference_5" Stroke="Blue"/>
+            <d3:LineGraph Name="lineGraphReference_6" Stroke="Blue"/>
         </d3:ChartPlotter>
     </Grid>
 </Window>
