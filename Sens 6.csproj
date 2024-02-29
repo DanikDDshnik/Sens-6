@@ -38,6 +38,9 @@
     <Reference Include="DynamicDataDisplay, Version=0.3.0.1, Culture=neutral, PublicKeyToken=5b7d744a7263923f, processorArchitecture=MSIL">
       <HintPath>packages\DynamicDataDisplay.0.3.0.1\lib\net45\DynamicDataDisplay.dll</HintPath>
     </Reference>
+    <Reference Include="FastExcel, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\FastExcel.3.0.13\lib\netstandard2.0\FastExcel.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
@@ -63,6 +66,7 @@
     </ApplicationDefinition>
     <Compile Include="Setting.cs" />
     <Compile Include="StartReference.cs" />
+    <Compile Include="StartTarget.cs" />
     <Compile Include="struct.cs" />
     <Page Include="GraphWindow.xaml">
       <Generator>MSBuild:Compile</Generator>

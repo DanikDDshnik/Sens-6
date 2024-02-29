@@ -15,6 +15,13 @@
             <d3:LineGraph Name="lineGraphReference_4" Stroke="Blue"/>
             <d3:LineGraph Name="lineGraphReference_5" Stroke="Blue"/>
             <d3:LineGraph Name="lineGraphReference_6" Stroke="Blue"/>
+
+            <d3:LineGraph Name="lineGraphTarget_1" Stroke="Red"/>
+            <d3:LineGraph Name="lineGraphTarget_2" Stroke="Red"/>
+            <d3:LineGraph Name="lineGraphTarget_3" Stroke="Red"/>
+            <d3:LineGraph Name="lineGraphTarget_4" Stroke="Red"/>
+            <d3:LineGraph Name="lineGraphTarget_5" Stroke="Red"/>
+            <d3:LineGraph Name="lineGraphTarget_6" Stroke="Red"/>
         </d3:ChartPlotter>
     </Grid>
 </Window>

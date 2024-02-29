@@ -17,7 +17,6 @@ namespace Sens_6
 
         public void Reference()
         {
-            Random rand = new Random();
             DataChanell[] chanell_Reference = new DataChanell[6];
 
             for(int i = 0; i < 6; i++)
@@ -37,23 +36,16 @@ namespace Sens_6
             bool TestTube5 = Settings.TestTube5;
             bool TestTube6 = Settings.TestTube6;
 
-            List<Point> points1 = new List<Point>();
-            List<Point> points2 = new List<Point>();
-            List<Point> points3 = new List<Point>();
-            List<Point> points4 = new List<Point>();
-            List<Point> points5 = new List<Point>();
-            List<Point> points6 = new List<Point>();
+            List<Point> points1_ref = new List<Point>();
+            List<Point> points2_ref = new List<Point>();
+            List<Point> points3_ref = new List<Point>();
+            List<Point> points4_ref = new List<Point>();
+            List<Point> points5_ref = new List<Point>();
+            List<Point> points6_ref = new List<Point>();
 
 
             if (TestTube1 == true)
             {
-
-                if (Settings.StandartNameChanell_1 == true)
-                    chanell_Reference[0].name = "Канал номер 1";
-                else
-                    chanell_Reference[0].name = Settings.chanellName[0];
-
-                chanell_Reference[0].name = Settings.chanellName[0];
                 for (int j = 0; j < 256; j++)
                 {
 
@@ -65,7 +57,7 @@ namespace Sens_6
                         {
                             list = sr.ReadLine();
                             chanell_Reference[0].aData[i] = Convert.ToInt32(list);
-                            points1.Add(new Point(i, chanell_Reference[0].aData[i]));
+                            points1_ref.Add(new Point(i, chanell_Reference[0].aData[i]));
                         }
                     }
 
@@ -74,97 +66,79 @@ namespace Sens_6
 
             if (TestTube2 == true)
             {
-                if (Settings.StandartNameChanell_2 == true)
-                    chanell_Reference[1].name = "Канал номер 2";
-                else
-                    chanell_Reference[1].name = Settings.chanellName[1];
-
                 for (int j = 0; j < 256; j++)
                 {
-                    int temp = rand.Next(0, 10);
-                    chanell_Reference[1].aData[j] = temp;
-                    double x = j;
-                    double y = chanell_Reference[1].aData[j];
-                    points2.Add(new Point(x, y));
+
+                    string path = "sens2_ref.txt";
+                    using (StreamReader sr = new StreamReader(path))
+                    {
+                        string list = "0";
+                        for (int i = 0; i < 256; i++)
+                        {
+                            list = sr.ReadLine();
+                            chanell_Reference[0].aData[i] = Convert.ToInt32(list);
+                            points2_ref.Add(new Point(i, chanell_Reference[0].aData[i]));
+                        }
+                    }
+
                 }
             }
 
             if (TestTube3 == true)
             {
-                if (Settings.StandartNameChanell_3 == true)
-                    chanell_Reference[2].name = "Канал номер 3";
-                else
-                    chanell_Reference[2].name = Settings.chanellName[2];
-
-                for (int j = 0; j < 256; j++)
-                {
-                    int temp = rand.Next(0, 10);
-                    chanell_Reference[2].aData[j] = temp;
-                    double x = j;
-                    double y = chanell_Reference[2].aData[j];
-                    points3.Add(new Point(x, y));
-                }
+                //for (int j = 0; j < 256; j++)
+                //{
+                //    int temp = rand.Next(0, 10);
+                //    chanell_Reference[2].aData[j] = temp;
+                //    double x = j;
+                //    double y = chanell_Reference[2].aData[j];
+                //    points3.Add(new Point(x, y));
+                //}
             }
 
             if (TestTube4 == true)
             {
-                if (Settings.StandartNameChanell_4 == true)
-                    chanell_Reference[3].name = "Канал номер 4";
-                else
-                    chanell_Reference[3].name = Settings.chanellName[3];
-
-                for (int j = 0; j < 256; j++)
-                {
-                    int temp = rand.Next(0, 10);
-                    chanell_Reference[3].aData[j] = temp;
-                    double x = j;
-                    double y = chanell_Reference[3].aData[j];
-                    points4.Add(new Point(x, y));
-                }
+                //for (int j = 0; j < 256; j++)
+                //{
+                //    int temp = rand.Next(0, 10);
+                //    chanell_Reference[3].aData[j] = temp;
+                //    double x = j;
+                //    double y = chanell_Reference[3].aData[j];
+                //    points4.Add(new Point(x, y));
+                //}
             }
 
             if (TestTube5 == true)
             {
-                if (Settings.StandartNameChanell_5 == true)
-                    chanell_Reference[4].name = "Канал номер 5";
-                else
-                    chanell_Reference[4].name = Settings.chanellName[4];
-
-                for (int j = 0; j < 256; j++)
-                {
-                    int temp = rand.Next(0, 10);
-                    chanell_Reference[4].aData[j] = temp;
-                    double x = j;
-                    double y = chanell_Reference[4].aData[j];
-                    points5.Add(new Point(x, y));
-                }
+                //for (int j = 0; j < 256; j++)
+                //{
+                //    int temp = rand.Next(0, 10);
+                //    chanell_Reference[4].aData[j] = temp;
+                //    double x = j;
+                //    double y = chanell_Reference[4].aData[j];
+                //    points5.Add(new Point(x, y));
+                //}
             }
 
             if (TestTube6 == true)
             {
-
-                if (Settings.StandartNameChanell_6 == true)
-                    chanell_Reference[5].name = "Канал номер 6";
-                else
-                    chanell_Reference[5].name = Settings.chanellName[5];
-
-                for (int j = 0; j < 256; j++)
-                {
-                    int temp = rand.Next(0, 10);
-                    chanell_Reference[5].aData[j] = temp;
-                    double x = j;
-                    double y = chanell_Reference[5].aData[j];
-                    points6.Add(new Point(x, y));
-                }
+                //for (int j = 0; j < 256; j++)
+                //{
+                //    int temp = rand.Next(0, 10);
+                //    chanell_Reference[5].aData[j] = temp;
+                //    double x = j;
+                //    double y = chanell_Reference[5].aData[j];
+                //    points6.Add(new Point(x, y));
+                //}
             }
 
 
-            Settings.points1 = points1;
-            Settings.points2 = points2;
-            Settings.points3 = points3;
-            Settings.points4 = points4;
-            Settings.points5 = points5;
-            Settings.points6 = points6;
+            Settings.points1_ref = points1_ref;
+            Settings.points2_ref = points2_ref;
+            Settings.points3_ref = points3_ref;
+            Settings.points4_ref = points4_ref;
+            Settings.points5_ref = points5_ref;
+            Settings.points6_ref = points6_ref;
         }
     }
 }
