@@ -15,6 +15,7 @@ namespace Sens_6
     {
         public void Target()
         {
+            Random rand = new Random();  
             DataChanell[] chanell_Target = new DataChanell[6];
 
             for (int i = 0; i < 6; i++)
@@ -41,25 +42,38 @@ namespace Sens_6
             bool TestTube5 = Settings.TestTube5;
             bool TestTube6 = Settings.TestTube6;
 
+            bool[] CheckTarget = new bool[6];
 
             if(TestTube1 == true)
             {
+                CheckTarget[0] = true;
                 for (int i = 0; i < 256; i++)
                 {
-                    
+                    int temp = rand.Next(0, 10);
+                    chanell_Target[0].aData[i] = temp;
+                    double x = i;
+                    double y = chanell_Target[0].aData[i];
+                    points1_tgt.Add(new Point(x, y));
                 }
             }
 
             if (TestTube2 == true)
             {
+                CheckTarget[1] = true;
                 for (int i = 0; i < 256; i++)
                 {
+                    int temp = rand.Next(0, 10);
+                    chanell_Target[1].aData[i] = temp;
+                    double x = i;
+                    double y = chanell_Target[1].aData[i];
+                    points2_tgt.Add(new Point(x, y));
 
                 }
             }
 
             if (TestTube3 == true)
             {
+                CheckTarget[2] = true;
                 for (int j = 0; j < 256; j++)
                 {
                     string path = "sens1_tgt.txt";
@@ -79,6 +93,7 @@ namespace Sens_6
 
             if (TestTube4 == true)
             {
+                CheckTarget[3] = true;
                 for (int j = 0; j < 256; j++)
                 {
                     string path = "sens2_tgt.txt";
@@ -98,17 +113,28 @@ namespace Sens_6
 
             if (TestTube5 == true)
             {
+                CheckTarget[4] = true;
                 for (int i = 0; i < 256; i++)
                 {
-
+                    int temp = rand.Next(0, 10);
+                    chanell_Target[4].aData[i] = temp;
+                    double x = i;
+                    double y = chanell_Target[4].aData[i];
+                    points5_tgt.Add(new Point(x, y));
                 }
 
             }
 
             if (TestTube6 == true)
             {
+                CheckTarget[5] = true;
                 for (int i = 0; i < 256; i++)
                 {
+                    int temp = rand.Next(0, 10);
+                    chanell_Target[5].aData[i] = temp;
+                    double x = i;
+                    double y = chanell_Target[5].aData[i];
+                    points6_tgt.Add(new Point(x, y));
 
                 }
 
@@ -120,6 +146,8 @@ namespace Sens_6
             Settings.points4_tgt = points4_tgt;
             Settings.points5_tgt = points5_tgt;
             Settings.points6_tgt = points6_tgt;
+
+            Settings.CheckTarget = CheckTarget;
         }
     }
 }

@@ -68,101 +68,166 @@ namespace Sens_6
             bool TestTube5 = Settings.TestTube5;
             bool TestTube6 = Settings.TestTube6;
 
+            bool[] CheckReference = new bool[6];
+            bool[] CheckTarget = new bool[6];
+
+            CheckReference = Settings.CheckReference;
+            CheckTarget = Settings.CheckTarget;
+
             if (TestTube1 == true)
             {
-                var dataSource_ref = new ObservableDataSource<Point>();
-                var dataSource_tgt = new ObservableDataSource<Point>();
+                if (CheckReference[0] == true)
+                {
+                    var dataSource_ref = new ObservableDataSource<Point>();
 
-                dataSource_ref.SetXMapping(p => p.X);
-                dataSource_ref.SetYMapping(p => p.Y);
-                dataSource_tgt.SetXMapping(p => p.X);
-                dataSource_tgt.SetYMapping(p => p.Y);
+                    dataSource_ref.SetXMapping(p => p.X);
+                    dataSource_ref.SetYMapping(p => p.Y);
 
-                dataSource_ref.AppendMany(points1_ref);
-                lineGraphReference_1.DataSource = dataSource_ref;
-                dataSource_tgt.AppendMany(points1_tgt);
-                lineGraphTarget_1.DataSource = dataSource_tgt;
+                    dataSource_ref.AppendMany(points1_ref);
+                    lineGraphReference_1.DataSource = dataSource_ref;
+                }
+
+                if (CheckTarget[0] == true)
+                {
+                    var dataSource_tgt = new ObservableDataSource<Point>();
+
+
+                    dataSource_tgt.SetXMapping(p => p.X);
+                    dataSource_tgt.SetYMapping(p => p.Y);
+
+
+                    dataSource_tgt.AppendMany(points1_tgt);
+                    lineGraphTarget_1.DataSource = dataSource_tgt;
+                }
             }
 
             if (TestTube2 == true)
             {
-                var dataSource_ref = new ObservableDataSource<Point>();
-                var dataSource_tgt = new ObservableDataSource<Point>();
+                if (CheckReference[1] == true)
+                {
+                    var dataSource_ref = new ObservableDataSource<Point>();
 
-                dataSource_ref.SetXMapping(p => p.X);
-                dataSource_ref.SetYMapping(p => p.Y);
-                dataSource_tgt.SetXMapping(p => p.X);
-                dataSource_tgt.SetYMapping(p => p.Y);
+                    dataSource_ref.SetXMapping(p => p.X);
+                    dataSource_ref.SetYMapping(p => p.Y);
+                    
+                    
+                    dataSource_ref.AppendMany(points2_ref);
+                    lineGraphReference_2.DataSource = dataSource_ref;
 
-                dataSource_ref.AppendMany(points2_tgt);
-                lineGraphReference_2.DataSource = dataSource_ref;
-                dataSource_tgt.AppendMany(points2_tgt);
-                lineGraphTarget_2.DataSource = dataSource_tgt;
+                }
+
+                if (CheckTarget[1] == true)
+                {
+                    var dataSource_tgt = new ObservableDataSource<Point>();
+
+                    dataSource_tgt.SetXMapping(p => p.X);
+                    dataSource_tgt.SetYMapping(p => p.Y);
+
+                    dataSource_tgt.AppendMany(points2_tgt);
+                    lineGraphTarget_2.DataSource = dataSource_tgt;
+                }
+
             }
 
             if (TestTube3 == true)
             {
-                var dataSource_ref = new ObservableDataSource<Point>();
-                var dataSource_tgt = new ObservableDataSource<Point>();
+                if (CheckReference[2] == true)
+                {
+                    var dataSource_ref = new ObservableDataSource<Point>();
 
-                dataSource_ref.SetXMapping(p => p.X);
-                dataSource_ref.SetYMapping(p => p.Y);
-                dataSource_tgt.SetXMapping(p => p.X);
-                dataSource_tgt.SetYMapping(p => p.Y);
+                    dataSource_ref.SetXMapping(p => p.X);
+                    dataSource_ref.SetYMapping(p => p.Y);
 
-                dataSource_ref.AppendMany(points3_ref);
-                lineGraphReference_3.DataSource = dataSource_ref;
-                dataSource_tgt.AppendMany(points3_tgt);
-                lineGraphTarget_3.DataSource = dataSource_tgt;
+                    dataSource_ref.AppendMany(points3_ref);
+                    lineGraphReference_3.DataSource = dataSource_ref;
+                }
+
+                if (CheckTarget[2] == true)
+                {
+                    var dataSource_tgt = new ObservableDataSource<Point>();
+
+                    dataSource_tgt.SetXMapping(p => p.X);
+                    dataSource_tgt.SetYMapping(p => p.Y);
+
+                    dataSource_tgt.AppendMany(points3_tgt);
+                    lineGraphTarget_3.DataSource = dataSource_tgt;
+                }
+
             }
 
             if (TestTube4 == true)
             {
-                var dataSource_ref = new ObservableDataSource<Point>();
-                var dataSource_tgt = new ObservableDataSource<Point>();
+                if (CheckReference[3] == true)
+                {
+                    var dataSource_ref = new ObservableDataSource<Point>();
 
-                dataSource_ref.SetXMapping(p => p.X);
-                dataSource_ref.SetYMapping(p => p.Y);
-                dataSource_tgt.SetXMapping(p => p.X);
-                dataSource_tgt.SetYMapping(p => p.Y);
+                    dataSource_ref.SetXMapping(p => p.X);
+                    dataSource_ref.SetYMapping(p => p.Y);
 
-                dataSource_ref.AppendMany(points4_ref);
-                lineGraphReference_4.DataSource = dataSource_ref;
-                dataSource_tgt.AppendMany(points4_tgt);
-                lineGraphTarget_4.DataSource = dataSource_tgt;
+                    dataSource_ref.AppendMany(points4_ref);
+                    lineGraphReference_4.DataSource = dataSource_ref;
+                }
+
+                if (CheckTarget[3] == true)
+                {
+                    var dataSource_tgt = new ObservableDataSource<Point>();
+
+                    dataSource_tgt.SetXMapping(p => p.X);
+                    dataSource_tgt.SetYMapping(p => p.Y);
+
+                    dataSource_tgt.AppendMany(points4_tgt);
+                    lineGraphTarget_4.DataSource = dataSource_tgt;
+                }
             }
-
 
             if (TestTube5 == true)
             {
-                var dataSource_ref = new ObservableDataSource<Point>();
-                var dataSource_tgt = new ObservableDataSource<Point>();
+                if (CheckReference[4] == true)
+                {
+                    var dataSource_ref = new ObservableDataSource<Point>();
 
-                dataSource_ref.SetXMapping(p => p.X);
-                dataSource_ref.SetYMapping(p => p.Y);
-                dataSource_tgt.SetXMapping(p => p.X);
-                dataSource_tgt.SetYMapping(p => p.Y);
+                    dataSource_ref.SetXMapping(p => p.X);
+                    dataSource_ref.SetYMapping(p => p.Y);
 
-                dataSource_ref.AppendMany(points5_ref);
-                lineGraphReference_5.DataSource = dataSource_ref;
-                dataSource_tgt.AppendMany(points5_tgt);
-                lineGraphTarget_5.DataSource = dataSource_tgt;
+                    dataSource_ref.AppendMany(points5_ref);
+                    lineGraphReference_5.DataSource = dataSource_ref;
+                }
+
+                if (CheckTarget[4] == true)
+                {
+                    var dataSource_tgt = new ObservableDataSource<Point>();
+
+                    dataSource_tgt.SetXMapping(p => p.X);
+                    dataSource_tgt.SetYMapping(p => p.Y);
+
+                    dataSource_tgt.AppendMany(points5_tgt);
+                    lineGraphTarget_5.DataSource = dataSource_tgt;
+                }
             }
 
             if (TestTube6 == true)
             {
-                var dataSource_ref = new ObservableDataSource<Point>();
-                var dataSource_tgt = new ObservableDataSource<Point>();
-                
-                dataSource_ref.SetXMapping(p => p.X);
-                dataSource_ref.SetYMapping(p => p.Y);
-                dataSource_tgt.SetXMapping(p => p.X);
-                dataSource_tgt.SetYMapping(p => p.Y);
+                if (CheckReference[5] == true)
+                {
+                    var dataSource_ref = new ObservableDataSource<Point>();
 
-                dataSource_ref.AppendMany(points6_ref);
-                lineGraphReference_6.DataSource = dataSource_ref;
-                dataSource_tgt.AppendMany(points6_tgt);
-                lineGraphTarget_6.DataSource = dataSource_tgt;
+                    dataSource_ref.SetXMapping(p => p.X);
+                    dataSource_ref.SetYMapping(p => p.Y);
+
+                    dataSource_ref.AppendMany(points6_ref);
+                    lineGraphReference_6.DataSource = dataSource_ref;
+                }
+
+                if (CheckTarget[5] == true)
+                {
+                    var dataSource_tgt = new ObservableDataSource<Point>();
+
+                    dataSource_tgt.SetXMapping(p => p.X);
+                    dataSource_tgt.SetYMapping(p => p.Y);
+
+                    dataSource_tgt.AppendMany(points6_tgt);
+                    lineGraphTarget_6.DataSource = dataSource_tgt;
+                }
             }
             plotter.Viewport.FitToView();
         }

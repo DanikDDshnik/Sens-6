@@ -44,9 +44,12 @@ namespace Sens_6
             List<Point> points5_ref = new List<Point>();
             List<Point> points6_ref = new List<Point>();
 
+            bool[] CheckReference = new bool[6]; 
+
 
             if (TestTube1 == true)
             {
+                CheckReference[0] = true;
                 for (int j = 0; j < 256; j++)
                 {
 
@@ -67,6 +70,7 @@ namespace Sens_6
 
             if (TestTube2 == true)
             {
+                CheckReference[1] = true;
                 for (int j = 0; j < 256; j++)
                 {
 
@@ -87,6 +91,7 @@ namespace Sens_6
 
             if (TestTube3 == true)
             {
+                CheckReference[2] = true;
                 for (int j = 0; j < 256; j++)
                 {
                     int temp = rand.Next(0, 10);
@@ -99,6 +104,7 @@ namespace Sens_6
 
             if (TestTube4 == true)
             {
+                CheckReference[3] = true;
                 for (int j = 0; j < 256; j++)
                 {
                     int temp = rand.Next(0, 10);
@@ -111,26 +117,28 @@ namespace Sens_6
 
             if (TestTube5 == true)
             {
-                //for (int j = 0; j < 256; j++)
-                //{
-                //    int temp = rand.Next(0, 10);
-                //    chanell_Reference[4].aData[j] = temp;
-                //    double x = j;
-                //    double y = chanell_Reference[4].aData[j];
-                //    points5.Add(new Point(x, y));
-                //}
+                CheckReference[4] = true;
+                for (int j = 0; j < 256; j++)
+                {
+                    int temp = rand.Next(0, 10);
+                    chanell_Reference[4].aData[j] = temp;
+                    double x = j;
+                    double y = chanell_Reference[4].aData[j];
+                    points5_ref.Add(new Point(x, y));
+                }
             }
 
             if (TestTube6 == true)
             {
-                //for (int j = 0; j < 256; j++)
-                //{
-                //    int temp = rand.Next(0, 10);
-                //    chanell_Reference[5].aData[j] = temp;
-                //    double x = j;
-                //    double y = chanell_Reference[5].aData[j];
-                //    points6.Add(new Point(x, y));
-                //}
+                CheckReference[5] = true;
+                for (int j = 0; j < 256; j++)
+                {
+                    int temp = rand.Next(0, 10);
+                    chanell_Reference[5].aData[j] = temp;
+                    double x = j;
+                    double y = chanell_Reference[5].aData[j];
+                    points6_ref.Add(new Point(x, y));
+                }
             }
 
 
@@ -140,6 +148,8 @@ namespace Sens_6
             Settings.points4_ref = points4_ref;
             Settings.points5_ref = points5_ref;
             Settings.points6_ref = points6_ref;
+
+            Settings.CheckReference = CheckReference;
         }
     }
 }

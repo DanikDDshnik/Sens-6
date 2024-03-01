@@ -32,6 +32,9 @@ namespace Sens_6
         public static List<Point> points5_tgt { get; set; }
         public static List<Point> points6_tgt { get; set; }
 
+        public static bool[] CheckReference = new bool[6];
+        public static bool[] CheckTarget = new bool[6];
+
 
 
     }
