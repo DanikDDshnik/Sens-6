@@ -229,7 +229,7 @@ namespace Sens_6
                     lineGraphTarget_6.DataSource = dataSource_tgt;
                 }
             }
-            plotter.Viewport.FitToView();
+           // plotter.Viewport.FitToView();
         }
     }
 }

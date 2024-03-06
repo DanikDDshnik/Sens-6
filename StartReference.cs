@@ -1,13 +1,9 @@
-﻿using Microsoft.Research.DynamicDataDisplay;
-using Microsoft.Research.DynamicDataDisplay.DataSources;
-using System;
+﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.IO;
-
+using OfficeOpenXml;
+using System.IO.Packaging;
 
 namespace Sens_6
 {
@@ -37,7 +33,7 @@ namespace Sens_6
             bool TestTube5 = Settings.TestTube5;
             bool TestTube6 = Settings.TestTube6;
 
-            List<Point> points1_ref = new List<Point>();
+            List<Point> points1_ref = new List<Point>(256);
             List<Point> points2_ref = new List<Point>();
             List<Point> points3_ref = new List<Point>();
             List<Point> points4_ref = new List<Point>();
@@ -50,9 +46,8 @@ namespace Sens_6
             if (TestTube1 == true)
             {
                 CheckReference[0] = true;
-                for (int j = 0; j < 256; j++)
+                try
                 {
-
                     string path = "sens1_ref.txt";
                     using (StreamReader sr = new StreamReader(path))
                     {
@@ -64,16 +59,19 @@ namespace Sens_6
                             points1_ref.Add(new Point(i, chanell_Reference[0].aData[i]));
                         }
                     }
-
                 }
+                catch(Exception ex)
+                {
+                    MessageBox.Show("При референсе 1-ого канала, произошла ошибка:" + ex.Message);
+                }
+
             }
 
             if (TestTube2 == true)
             {
                 CheckReference[1] = true;
-                for (int j = 0; j < 256; j++)
+                try
                 {
-
                     string path = "sens2_ref.txt";
                     using (StreamReader sr = new StreamReader(path))
                     {
@@ -85,62 +83,113 @@ namespace Sens_6
                             points2_ref.Add(new Point(i, chanell_Reference[0].aData[i]));
                         }
                     }
-
                 }
+                catch(Exception ex)
+                {
+                    MessageBox.Show("При референсе 2-ого канала, произошла ошибка:" + ex.Message);
+                }
+
             }
 
             if (TestTube3 == true)
             {
                 CheckReference[2] = true;
-                for (int j = 0; j < 256; j++)
+                try
                 {
-                    int temp = rand.Next(0, 10);
-                    chanell_Reference[2].aData[j] = temp;
-                    double x = j;
-                    double y = chanell_Reference[2].aData[j];
-                    points3_ref.Add(new Point(x, y));
+                    for (int j = 0; j < 256; j++)
+                    {
+                        int temp = rand.Next(0, 10);
+                        chanell_Reference[2].aData[j] = temp;
+                        double x = j;
+                        double y = chanell_Reference[2].aData[j];
+                        points3_ref.Add(new Point(x, y));
+                    }
                 }
+                catch(Exception ex)
+                {
+                    MessageBox.Show("При референсе 3-ого канала, произошла ошибка:" + ex.Message);
+                }
+                
             }
 
             if (TestTube4 == true)
             {
                 CheckReference[3] = true;
-                for (int j = 0; j < 256; j++)
+                try
                 {
-                    int temp = rand.Next(0, 10);
-                    chanell_Reference[3].aData[j] = temp;
-                    double x = j;
-                    double y = chanell_Reference[3].aData[j];
-                    points4_ref.Add(new Point(x, y));
+                    for (int j = 0; j < 256; j++)
+                    {
+                        int temp = rand.Next(0, 10);
+                        chanell_Reference[3].aData[j] = temp;
+                        double x = j;
+                        double y = chanell_Reference[3].aData[j];
+                        points4_ref.Add(new Point(x, y));
+                    }
+                }
+                catch(Exception ex)
+                {
+                    MessageBox.Show("При референсе 4-ого канала, произошла ошибка:" + ex.Message);
                 }
             }
 
             if (TestTube5 == true)
             {
                 CheckReference[4] = true;
-                for (int j = 0; j < 256; j++)
+                ExcelPackage.LicenseContext = LicenseContext.NonCommercial;
+                string filePath = "D:\\Коды\\С#\\Sens 6\\bin\\Debug\\ref5.xlsx";
+                int columnIndex = 5;
+                string[] dataArray;
+
+                try
                 {
-                    int temp = rand.Next(0, 10);
-                    chanell_Reference[4].aData[j] = temp;
-                    double x = j;
-                    double y = chanell_Reference[4].aData[j];
-                    points5_ref.Add(new Point(x, y));
+                    FileInfo file = new FileInfo(filePath);
+                    using (ExcelPackage package = new ExcelPackage(file))
+                    {
+                        ExcelWorksheet worksheet = package.Workbook.Worksheets[0];
+                        int rowCount = worksheet.Dimension.Rows;
+                        dataArray = new string[rowCount];
+                        for(int i = 3; i <= rowCount; i++)
+                        {
+                            dataArray[i-3] = worksheet.Cells[i, columnIndex].Value?.ToString();
+                        }
+                    }
+                    for(int i = 0; i < 256; i++)
+                    {
+                        string list = dataArray[i];
+                        double temp = Convert.ToDouble(list);
+                        chanell_Reference[4].aData[i] = Convert.ToInt32(temp);
+                        double x = i;
+                        double y = chanell_Reference[4].aData[i];
+                        points5_ref.Add(new Point(x, y));
+                    }
+
+                }
+                catch(Exception ex)
+                {
+                    MessageBox.Show("При референсе 5-ого канала, произошла ошибка: " + ex.Message);
                 }
             }
 
             if (TestTube6 == true)
             {
                 CheckReference[5] = true;
-                for (int j = 0; j < 256; j++)
+                try
                 {
-                    int temp = rand.Next(0, 10);
-                    chanell_Reference[5].aData[j] = temp;
-                    double x = j;
-                    double y = chanell_Reference[5].aData[j];
-                    points6_ref.Add(new Point(x, y));
+                    for (int j = 0; j < 256; j++)
+                    {
+                        int temp = rand.Next(0, 10);
+                        chanell_Reference[5].aData[j] = temp;
+                        double x = j;
+                        double y = chanell_Reference[5].aData[j];
+                        points6_ref.Add(new Point(x, y));
+                    }
                 }
+                catch(Exception ex)
+                {
+                    MessageBox.Show("При референсе 6-ого канала, произошла ошибка:" + ex.Message);
+                }
+                
             }
-
 
             Settings.points1_ref = points1_ref;
             Settings.points2_ref = points2_ref;

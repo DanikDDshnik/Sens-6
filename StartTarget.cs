@@ -74,41 +74,33 @@ namespace Sens_6
             if (TestTube3 == true)
             {
                 CheckTarget[2] = true;
-                for (int j = 0; j < 256; j++)
+                string path = "sens1_tgt.txt";
+                using (StreamReader sr = new StreamReader(path))
                 {
-                    string path = "sens1_tgt.txt";
-                    using (StreamReader sr = new StreamReader(path))
+                    string list = "0";
+                    for (int i = 0; i < 256; i++)
                     {
-                        string list = "0";
-                        for (int i = 0; i < 256; i++)
-                        {
-                            list = sr.ReadLine();
-                            chanell_Target[0].aData[i] = Convert.ToInt32(list);
-                            points3_tgt.Add(new Point(i, chanell_Target[0].aData[i]));
-                        }
+                        list = sr.ReadLine();
+                        chanell_Target[0].aData[i] = Convert.ToInt32(list);
+                        points3_tgt.Add(new Point(i, chanell_Target[0].aData[i]));
                     }
                 }
-
             }
 
             if (TestTube4 == true)
             {
                 CheckTarget[3] = true;
-                for (int j = 0; j < 256; j++)
+                string path = "sens2_tgt.txt";
+                using (StreamReader sr = new StreamReader(path))
                 {
-                    string path = "sens2_tgt.txt";
-                    using (StreamReader sr = new StreamReader(path))
+                    string list = "0";
+                    for (int i = 0; i < 256; i++)
                     {
-                        string list = "0";
-                        for (int i = 0; i < 256; i++)
-                        {
-                            list = sr.ReadLine();
-                            chanell_Target[0].aData[i] = Convert.ToInt32(list);
-                            points4_tgt.Add(new Point(i, chanell_Target[0].aData[i]));
-                        }
+                        list = sr.ReadLine();
+                        chanell_Target[0].aData[i] = Convert.ToInt32(list);
+                        points4_tgt.Add(new Point(i, chanell_Target[0].aData[i]));
                     }
                 }
-
             }
 
             if (TestTube5 == true)

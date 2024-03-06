@@ -10,7 +10,7 @@
         <Image Grid.RowSpan="12" Grid.Column="1" Grid.ColumnSpan="12"  Source="/photo_2024-02-12_01-30-09.jpg" Stretch="Fill" Grid.Row="1"/>
         <StatusBar Grid.Column="15" Grid.ColumnSpan="4" Grid.Row="17" Background="#FFBFBFBF" FontFamily="Arial" FontWeight="Bold" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="0,16,0,0" Height="20" Width="146" >Умные ДНК Технологии</StatusBar>
         <Button Name="resultButton" Click="resultButton_Click" Grid.Column="5" Grid.ColumnSpan="4" Content="Result" Grid.Row="16" FontSize="24" FontWeight="Bold"/>
-        <Button Name="StartTargetButton" Click ="StartTargetButton_Click" Grid.Column="2" Grid.ColumnSpan="3" Content="Tasert" Grid.Row="16"/>
+        <Button Name="StartTargetButton" Click ="StartTargetButton_Click" Grid.Column="2" Grid.ColumnSpan="3" Content="Target" Grid.Row="16"/>
         <Button Name="StartTermostatButton" Click ="StartTermostatButton_Click" Grid.Column="5" Grid.ColumnSpan="4" Content="Termostat" Grid.Row="15"/>
         <Button Name="StartReferenceButton" Click ="StartReferenceButton_Click" Grid.Column="2" Grid.ColumnSpan="3" Content="Reference" Grid.Row="15"/>
         <CheckBox Name="TestTubeAll" Checked="TestTubeAll_Checked" Grid.Column="14" Grid.ColumnSpan="5"  IsThreeState="False" Content="Все пробирки" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Row="15" FontSize="16" Height="36" Width="150" Margin="37,0,0,0"/>
